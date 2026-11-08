@@ -14,9 +14,11 @@ class FAQKnowledgeBase:
         text_lower = text.lower()
         for topic in self.faq_data:
             topic_lower = topic.lower()
+            if topic_lower == "policy":
+                if "store policy" in text_lower or "warranty" in text_lower:
+                    return topic
+                continue
             if topic_lower in text_lower:
-                return topic
-            if topic_lower == "policies" and "store policy" in text_lower:
                 return topic
         return None
 

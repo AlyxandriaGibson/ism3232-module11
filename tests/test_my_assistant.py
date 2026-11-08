@@ -39,10 +39,10 @@ def test_faq_policy_question_uses_tool():
     assert "1-year warranty" in reply
 
 
-def test_faq_missing_topic_asks_for_clarification():
+def test_unknown_questions_go_to_model():
     assistant = make_assistant()
-    reply = assistant.respond("What is your policy?")
-    assert "Which topic? Please ask about store hours, shipping, or policies." in reply
+    reply = assistant.respond("What is your favorite color?")
+    assert "I'm not sure how to help you with that." in reply
 
 
 def test_human_handoff_for_sensitive_topics():

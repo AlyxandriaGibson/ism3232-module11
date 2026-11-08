@@ -1,0 +1,3 @@
+## ISM3232 Lab 10: OOP for Agents
+
+This FAQ Assistant (`FAQAssistant`) answers general store policies and operational questions for Tampa Outfitters by using an underlying lookup tool (`FAQKnowledgeBase`). This assistant uses rule based keyword matching instead of artificial intelligence. Requests regarding financial transactions, returns, or disputes are passed directly to a human agent, as it involves sensitive information and cannot be securely handled by this bot, as well as automated keyword lookups not being able to make policy exceptions. If this system were to be connected to real customer data without safeguards, something as basic as a rule matching error could expose unredacted personal information or allow unauthorized actions without human oversight.
